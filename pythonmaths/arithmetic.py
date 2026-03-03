@@ -108,6 +108,7 @@ def subtract(x: int | float, y: int | float) -> float:
     """
     return x - y
 
+
 def square_root(x: int | float) -> float:
     """Return the square root of a number.
 
