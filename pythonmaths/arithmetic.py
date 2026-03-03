@@ -51,8 +51,18 @@ def divide(x: int | float, y: int | float) -> float:
         5.0
     >>> arithmetic.divide(5, 2)
         2.5
+    >>> arithmtic.divide(x, 0)
+        "You cannot divide by 0, please choose another value for 'y'."
     """
-    return x / y
+
+    try:
+
+        return x / y
+
+    except ZeroDivisionError as e:
+        raise ZeroDivisionError(
+            "You cannot divide by 0, please choose another value for 'y'."
+        ) from e
 
 
 def multiply(x: int | float, y: int | float) -> float:
